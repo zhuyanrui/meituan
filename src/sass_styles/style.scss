@@ -1,0 +1,93 @@
+@import "_minix.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    background: #06c1ae;
+    @include box_flex;
+    @include align;
+    @include justify(space-between);
+    span {
+        display: inline-block;
+    }
+    span:nth-child(1) {
+        width: pxTorem(60px);
+        color: #fff;
+        font-size: pxTorem(16px);
+        margin-left: pxTorem(10px);
+    }
+    .search {
+        @include flex;
+        height: pxTorem(30px);
+        background: #05a494;
+        margin-left: pxTorem(10px);
+        border-radius: pxTorem(3px);
+        input {
+            @include flex;
+            height: pxTorem(30px);
+            color: #fff;
+            font-size: pxTorem(14px);
+        }
+        .icon-fangdajing {
+            font-size: pxTorem(14px);
+            color: #fff;
+            margin-left: pxTorem(5px);
+        }
+    }
+    span:nth-child(3) {
+        width: pxTorem(40px);
+        font-size: pxTorem(12px);
+        color: #fff;
+        margin-left: pxTorem(20px);
+        text-align: center;
+        .iconfont {
+            font-size: pxTorem(16px);
+            color: #fff;
+        }
+    }
+}
+
+.section {
+    width: 100%;
+    background: #ccc;
+    @include flex;
+    overflow: hidden;
+    .up,
+    .top {
+        width: 100%;
+        height: pxTorem(30px);
+        text-align: center;
+        line-height: pxTorem(30px);
+        color: #999;
+        background: pink;
+        font-size: pxTorem(14px);
+    }
+    .up {
+        position: absolute;
+        top: pxTorem(-30px);
+    }
+    .top {
+        position: absolute;
+        bottom: pxTorem(-30px);
+    }
+}
+
+.banner {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.swiper-container,
+.swiper-wrapper,
+.swiper-slide {
+    width: 100%;
+    height: pxTorem(200px);
+}
